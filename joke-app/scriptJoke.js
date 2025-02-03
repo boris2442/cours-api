@@ -35,7 +35,13 @@ function Blague(){
     .then((resp)=>resp.json())
     .then((info)=>{
         headerBlague.textContent=info.data.content.text_head
-        textBlague.textContent=info.data.content.text
+        textBlague.textContent=info.data.content.text;
+        if(textBlague.textContent===""){
+            textBlague.textContent=info.data.content.text_head;
+            return
+        }
+
+
     })
     
 }
