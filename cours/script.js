@@ -70,7 +70,8 @@ fetch("data.json", init).then((res)=>console.log(res));
 //CRUD=>Create des donnees(POST); GET=>envoie des donnees, Update(PUT);
 //delete=>supprime moi les donees 
 
-// const produits = [{
+// const produits = [
+//{
 //     nom: "smartphone",
 //     marque: "samsung",
 //     model: "s25 ultra"
@@ -79,7 +80,8 @@ fetch("data.json", init).then((res)=>console.log(res));
 //   nom: "ordinateures",
 //   marque: "mackbook",
 //   model: "pro"
-// }];
+// }
+// ];
 
 // const nproduits = produits.map(produits => 
 // produits.nom,
