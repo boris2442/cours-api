@@ -38,7 +38,9 @@ function Blague(){
         textBlague.textContent=info.data.content.text;
         if(textBlague.textContent===""){
             textBlague.textContent=info.data.content.text_head;
-            return
+           
+        }else{
+            textBlague.textContent=info.data.content.text;
         }
 
 
@@ -47,4 +49,10 @@ function Blague(){
 }
 const btn=document.querySelector("#btn");
 btn.addEventListener("click",Blague)
-// Blague();
+
+
+
+
+
+
+

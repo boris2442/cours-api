@@ -54,3 +54,21 @@ xhr.send();
             console.log(error);
         });
  
+
+
+        //cours api sur le Headers
+
+const myHeaders =new Headers();
+const init={
+    method:'GET',
+    headers:myHeaders,
+    mode:"cors",
+    cache:"default"
+}
+fetch("data.json", init).then((res)=>console.log(res));
+
+//CRUD=>Create des donnees(POST); GET=>envoie des donnees, Update(PUT);
+//delete=>supprime moi les donees 
+
+
+ 
