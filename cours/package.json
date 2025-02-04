@@ -1,5 +1,5 @@
 {
-  "name": "cours",
+  "name": "cours-crud-server-json",
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
@@ -8,5 +8,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "Demarrerun server pour le CRUD"
 }
