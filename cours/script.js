@@ -23,7 +23,7 @@ let xhr = new XMLHttpRequest();
 xhr.open('GET','https://api.blablagues.net/?rub=blagues', true );
 xhr.onload=function(){ //gestion de la reponse
    if(xhr.status>=200 && xhr.status<300){
-    console.log(xhr.responseText);
+    // console.log(xhr.responseText);
    }else{
     // console.log("Error", responseText);
    }
@@ -48,10 +48,10 @@ xhr.send();
 
         fetch('https://api.blablagues.net/?rub=blagues')
         .then((response)=>{
-            console.log(response);
+            // console.log(response);
         })  
         .catch((error)=>{
-            console.log(error);
+            // console.log(error);
         });
  
 
@@ -65,7 +65,7 @@ const init={
     mode:"cors",
     cache:"default"
 }
-fetch("data.json", init).then((res)=>console.log(res));
+// fetch("data.json", init).then((res)=>console.log(res));
 
 //CRUD=>Create des donnees(POST); GET=>envoie des donnees, Update(PUT);
 //delete=>supprime moi les donees 
@@ -90,3 +90,22 @@ fetch("data.json", init).then((res)=>console.log(res));
 // console.log(nproduits);
 
  
+const init2={
+    method:'POST',
+    headers:{
+        'Content-Type':'application/json'
+    },
+    body:JSON.stringify({
+        pseudo:"rostodev",
+        message:"hello word"
+    }),
+    mode:"cors",
+    Credentials:"same-origin",
+};
+
+
+
+  document.querySelector("form").addEventListener("submit",()=>{
+    fetch("http://localhost:3000/posts", init2)
+    .then(() => console.log("data envoyée"));
+  })

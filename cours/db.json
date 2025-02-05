@@ -1,14 +1,19 @@
 {
-    "posts":[
-        {
-           " nom": "smartphone",
-            " marque": "samsung",
-             "model": "s25 ultra"
-            },
-            {
-            "nom": "ordinateures",
-            "marque": "mackbook",
-            "model": "pro"
-            }
-    ]
+  "posts": [
+    {
+      "id": "6119",
+      "pseudo": "rostodev",
+      "message": "hello word"
+    },
+    {
+      "id": "86b6",
+      "pseudo": "rostodev",
+      "message": "hello word"
+    },
+    {
+      "id": "5c6c",
+      "pseudo": "rostodev",
+      "message": "hello word"
+    }
+  ]
 }
