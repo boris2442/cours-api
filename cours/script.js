@@ -60,7 +60,7 @@ xhr.send();
 
 const myHeaders =new Headers();
 const init={
-    method:'GET',
+    method:'DELETE',
     headers:myHeaders,
     mode:"cors",
     cache:"default"
@@ -103,9 +103,39 @@ const init2={
     Credentials:"same-origin",
 };
 
-
+//
 
   document.querySelector("form").addEventListener("submit",()=>{
-    fetch("http://localhost:3000/posts", init2)
+    fetch("http://localhost:3000/posts/", init2)
     .then(() => console.log("data envoyée"));
   })
+
+
+  //////////////////1.LES ASYNCHRONES //////////////////
+
+  setInterval(()=>{
+    //console.log("text");
+  },2000);
+
+
+
+
+  //2.LES PROMESSES //////////////////
+//les promises sont la pour soutenir les les setinval et les settimeout
+  //fetch("mon lien").then((res)=>res)
+
+  //les async/await
+
+  //attend que le await soit execute avant de faire la suite
+
+//   await fetch("mon lien")
+
+//async function fetchData(){
+//}
+
+
+//const fetchData2= async()=>{
+    //await fetch("mon lien")
+    //executeFonction()
+//}
+
