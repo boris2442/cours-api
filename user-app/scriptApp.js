@@ -16,7 +16,7 @@ const fetchUser= async()=>{
  await   fetch("https://randomuser.me/api/?results=24")
  .then((res)=>res.json())
  .then((data)=>  userData=data.results)
-console.log(userData)
+// console.log(userData)
 
 }
 const userDisplay=async ()=>{
@@ -37,7 +37,7 @@ const userDisplay=async ()=>{
     const today=new Date();
     // console.log(today);
     const todayTimestamp=Date.parse(today);
-    // console.log(todayTimestamp);
+    console.log(todayTimestamp);
     const timestamp=Date.parse(date);
     // console.log((todayTimestamp-timestamp)/(1000*60*60*24));
     return Math.floor((todayTimestamp- timestamp)/(1000*60*60*24));
@@ -49,10 +49,10 @@ document.body.innerHTML=userData.map(
        
         `
          <div class="card">
-         <img src=${user.picture.medium} alt="${user.name.first}" />
-         <h2>${user.name.first} <span>${user.name.last}</span></h2>
-         <p>${user.location.city},${dateParser(user.dob.date)} </p>
-         <i> Membre depuis  ${calday(user.registered.date) }</i>
+           <img src=${user.picture.medium} alt="${user.name.first}" />
+           <h2>${user.name.first} <span>${user.name.last}</span></h2>
+           <p>${user.location.city},${dateParser(user.dob.date)} </p>
+           <i> Membre depuis  ${calday(user.registered.date) }</i>
          </div>
        
         `
