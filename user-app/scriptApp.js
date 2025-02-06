@@ -25,7 +25,11 @@ document.body.innerHTML=userData.map(
     (user)=>
        
         `
-        <h2>${user.name.first}</h2>
+         <div class="card">
+         <img src=${user.picture.medium} alt="" />
+         <h2>${user.name.first} <span>${user.name.last}</span></h2>
+         </div>
+       
         `
 
    
