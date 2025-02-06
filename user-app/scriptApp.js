@@ -28,22 +28,19 @@ const userDisplay=async ()=>{
         day:"numeric",
         hour:"numeric",
         minute:"numeric",
-        second:"numeric",
-        // timeZone:"UTC",
-        // timeZoneName:"short",
-        // weekday:"long",
-        // week:"large"
+        second:"numeric"
+        
     })
     return newDate
   }
   const calday=(date)=>{
-    const today=new Date()
-    console.log(today)
-    const todayTimestamp=Date.parse(today)
-    console.log(todayTimestamp)
-    const timestamp=Date.parse(date)
-    console.log((todayTimestamp-timestamp)/(1000*60*60*24));
-    return Math.floor((todayTimestamp- timestamp)/(1000*60*60*24))
+    const today=new Date();
+    // console.log(today);
+    const todayTimestamp=Date.parse(today);
+    // console.log(todayTimestamp);
+    const timestamp=Date.parse(date);
+    // console.log((todayTimestamp-timestamp)/(1000*60*60*24));
+    return Math.floor((todayTimestamp- timestamp)/(1000*60*60*24));
   }
 
   calday()
