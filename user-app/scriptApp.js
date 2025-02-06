@@ -33,6 +33,8 @@ const userDisplay=async ()=>{
     })
     return newDate
   }
+
+
   const calday=(date)=>{
     const today=new Date();
     // console.log(today);
@@ -40,10 +42,11 @@ const userDisplay=async ()=>{
     console.log(todayTimestamp);
     const timestamp=Date.parse(date);
     // console.log((todayTimestamp-timestamp)/(1000*60*60*24));
-    return Math.floor((todayTimestamp- timestamp)/(1000*60*60*24));
+    return Math.floor((todayTimestamp - timestamp)/(1000*60*60*24));
   }
 
   calday()
+
 document.body.innerHTML=userData.map(
     (user)=>
        
