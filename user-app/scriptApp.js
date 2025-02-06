@@ -43,7 +43,7 @@ const userDisplay=async ()=>{
     console.log(todayTimestamp)
     const timestamp=Date.parse(date)
     console.log((todayTimestamp-timestamp)/(1000*60*60*24));
-    return todayTimestamp- timestamp
+    return Math.floor((todayTimestamp- timestamp)/(1000*60*60*24))
   }
 
   calday()
@@ -55,7 +55,7 @@ document.body.innerHTML=userData.map(
          <img src=${user.picture.medium} alt="${user.name.first}" />
          <h2>${user.name.first} <span>${user.name.last}</span></h2>
          <p>${user.location.city},${dateParser(user.dob.date)} </p>
-         <i> Membre depuis ${user.registered.date} </i>
+         <i> Membre depuis  ${calday(user.registered.date) }</i>
          </div>
        
         `
