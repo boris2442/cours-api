@@ -28,6 +28,8 @@ document.body.innerHTML=userData.map(
          <div class="card">
          <img src=${user.picture.medium} alt="${user.name.first}" />
          <h2>${user.name.first} <span>${user.name.last}</span></h2>
+         <p>${user.location.city},${user.dob.date} </p>
+         <i> Membre depuis ${user.registered.date} </i>
          </div>
        
         `
