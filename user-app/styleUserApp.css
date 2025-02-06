@@ -26,6 +26,11 @@ body{
     min-height: 260px;
     display: grid;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
 
 }
 img{
