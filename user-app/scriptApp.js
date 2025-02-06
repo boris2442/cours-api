@@ -21,6 +21,21 @@ console.log(userData)
 }
 const userDisplay=async ()=>{
   await  fetchUser();
+  const dateParser=(date)=>{
+    const newDate=new Date(date).toLocaleDateString("fr-FR",{
+        year:"numeric",
+        month:'long',
+        day:"numeric",
+        hour:"numeric",
+        minute:"numeric",
+        second:"numeric",
+        // timeZone:"UTC",
+        // timeZoneName:"short",
+        // weekday:"long",
+        // week:"large"
+    })
+    return newDate
+  }
 document.body.innerHTML=userData.map(
     (user)=>
        
@@ -28,7 +43,7 @@ document.body.innerHTML=userData.map(
          <div class="card">
          <img src=${user.picture.medium} alt="${user.name.first}" />
          <h2>${user.name.first} <span>${user.name.last}</span></h2>
-         <p>${user.location.city},${user.dob.date} </p>
+         <p>${user.location.city},${dateParser(user.dob.date)} </p>
          <i> Membre depuis ${user.registered.date} </i>
          </div>
        
